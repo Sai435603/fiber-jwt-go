@@ -23,7 +23,7 @@ func main() {
 			Key: jwtSecret,
 		},
 	}))
-	//it will pass through middleware
+	//all the routes from here are protected by jwtware
 	app.Get("/user", func(c *fiber.Ctx) error {
 		user := c.Locals("user").(*jwt.Token)
 		claims := user.Claims.(jwt.MapClaims)

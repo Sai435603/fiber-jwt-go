@@ -1,6 +1,6 @@
 package main
 
 type User struct {
-	Username string `json:"username"`
-	Password string `json:"_"`
+	Username string `json:"user"`
+	Password string `json:"password"`
 }
